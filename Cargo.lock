@@ -211,6 +211,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "bootloader_api"
+version = "0.11.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "88f843888771a490c3ad246e58bf25e62da70d2c653d74a3eca92acbab599e02"
+
+[[package]]
 name = "byteorder"
 version = "1.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -496,6 +502,8 @@ name = "hyper_os"
 version = "0.1.0"
 dependencies = [
  "bootloader",
+ "kernel",
+ "ovmf-prebuilt",
 ]
 
 [[package]]
@@ -523,6 +531,13 @@ name = "itoa"
 version = "1.0.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b1a46d1a171d865aa5f83f92695765caa047a9b4cbae2cbf37dbd613a793fd4c"
+
+[[package]]
+name = "kernel"
+version = "0.1.0"
+dependencies = [
+ "bootloader_api",
+]
 
 [[package]]
 name = "libc"
@@ -572,6 +587,12 @@ name = "memchr"
 version = "2.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f665ee40bc4a3c5590afb1e9677db74a508659dfd71e126420da8274909a0167"
+
+[[package]]
+name = "ovmf-prebuilt"
+version = "0.1.0-alpha.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fa50141d081512ab30fd9e7e7692476866df5098b028536ad6680212e717fa8d"
 
 [[package]]
 name = "parking"
